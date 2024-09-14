@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import variables from '../../styles/variables'
 
 export const ContactsList = styled.div`
   width: 100%;
@@ -13,4 +14,20 @@ export const Container = styled.div`
   align-items: center;
   flex-direction: column;
   margin: 0 auto;
+`
+
+export const Input = styled.input`
+  margin-top: -1.25rem;
+  margin-bottom: 4rem;
+  height: 2.5rem;
+  width: clamp(20rem, 60vw, 45rem);
+  max-width: 80vw;
+  padding: 12px 16px;
+  border-radius: 6px;
+  border: 0.1rem solid ${variables.blue3};
+  outline: none;
+
+  &::placeholder {
+    color: ${variables.blue3};
+  }
 `

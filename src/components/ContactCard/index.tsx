@@ -8,7 +8,14 @@ import { ImFileEmpty } from 'react-icons/im'
 
 const ContactCard = () => {
   const contacts = useSelector((state: RootReducer) => state.contacts.itens)
+  const { searchTerm } = useSelector((state: RootReducer) => state.filters)
   const contactsEmpty = contacts.length === 0
+
+  const contactsFilter = () => {
+    return contacts.filter(
+      (c) => c.name.toLowerCase().search(searchTerm.toLowerCase()) >= 0
+    )
+  }
 
   return (
     <S.ContactCard>
@@ -18,7 +25,7 @@ const ContactCard = () => {
       </S.Titulo>
       {!contactsEmpty ? (
         <>
-          {contacts.map((t) => (
+          {contactsFilter().map((t) => (
             <Contact
               key={t.name}
               name={t.name}
