@@ -1,11 +1,7 @@
 import { styled } from 'styled-components'
 import variables from '../../styles/variables'
 
-type Props = {
-  isEditing: boolean
-}
-
-export const Cont = styled.div<Props>`
+export const Cont = styled.div`
   width: 100%;
   padding: 1.5em 1em;
   display: grid;
@@ -19,12 +15,6 @@ export const Cont = styled.div<Props>`
     width: 50px;
   }
 
-  h2,
-  p {
-    border-bottom: ${(props) =>
-      props.isEditing ? '2px solid rgba(0,0,0,0.5) ' : 'none'};
-  }
-
   h2 {
     font-size: 1.25em;
     font-weight: bold;
@@ -32,6 +22,20 @@ export const Cont = styled.div<Props>`
 
   p {
     font-size: 0.85em;
+  }
+
+  .infos {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+
+    input {
+      width: 90%;
+      background-color: transparent;
+      border: none;
+      outline: none;
+      border-bottom: 2px solid rgba(0, 0, 0, 0.4);
+    }
   }
 
   button {

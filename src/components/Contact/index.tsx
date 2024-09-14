@@ -14,15 +14,40 @@ type Props = ContactObj
 
 const Contact = ({ name, phone, email, id }: Props) => {
   const [isEditing, setIsEditing] = useState(false)
+  const [editedName, setEditedName] = useState(name)
+  const [editedPhone, setEditedPhone] = useState(phone)
+  const [editedEmail, setEditedEmail] = useState(email)
   const dispatch = useDispatch()
 
   return (
-    <S.Cont isEditing={isEditing}>
+    <S.Cont>
       <img src="https://img.icons8.com/?size=100&id=98957&format=png&color=000000" />
-      <div>
-        <h2>{name}</h2>
-        <p>{phone}</p>
-        <p>{email}</p>
+      <div className="infos">
+        {!isEditing ? (
+          <>
+            <h2>{name}</h2>
+            <p>{phone}</p>
+            <p>{email}</p>
+          </>
+        ) : (
+          <>
+            <input
+              type="text"
+              value={editedName}
+              onChange={(e) => setEditedName(e.target.value)}
+            />
+            <input
+              type="text"
+              value={editedPhone}
+              onChange={(e) => setEditedPhone(e.target.value)}
+            />
+            <input
+              type="email"
+              value={editedEmail}
+              onChange={(e) => setEditedEmail(e.target.value)}
+            />
+          </>
+        )}
       </div>
 
       {isEditing ? (
