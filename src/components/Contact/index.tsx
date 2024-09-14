@@ -13,7 +13,7 @@ import { useDispatch } from 'react-redux'
 type Props = ContactObj
 
 const Contact = ({ name, phone, email, id }: Props) => {
-  const [isEditing, setisEditing] = useState(false)
+  const [isEditing, setIsEditing] = useState(false)
   const dispatch = useDispatch()
 
   return (
@@ -27,12 +27,12 @@ const Contact = ({ name, phone, email, id }: Props) => {
 
       {isEditing ? (
         <S.Buttons>
-          <FaSave onClick={() => setisEditing(false)} />
-          <ImCancelCircle onClick={() => setisEditing(false)} />
+          <FaSave onClick={() => setIsEditing(false)} />
+          <ImCancelCircle onClick={() => setIsEditing(false)} />
         </S.Buttons>
       ) : (
         <S.Buttons>
-          <FaEdit onClick={() => setisEditing(true)} />
+          <FaEdit onClick={() => setIsEditing(true)} />
           <IoPersonRemove onClick={() => dispatch(remove(id))} />
         </S.Buttons>
       )}
