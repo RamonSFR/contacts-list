@@ -15,10 +15,6 @@ export const Cont = styled.div`
     width: 50px;
   }
 
-  svg {
-    cursor: pointer;
-  }
-
   h2 {
     font-size: 1.25em;
     font-weight: bold;
@@ -50,4 +46,13 @@ export const Buttons = styled.div`
   justify-content: flex-start;
   align-items: center;
   gap: 0.5em;
+
+  svg {
+    cursor: pointer;
+    font-size: 1.75em;
+
+    @media (max-width: 768px) {
+      font-size: 1.5em;
+    }
+  }
 `

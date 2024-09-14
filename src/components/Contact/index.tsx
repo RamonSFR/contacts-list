@@ -23,13 +23,13 @@ const Contact = ({ name, phone, email }: Props) => {
 
       {estaEditando ? (
         <S.Buttons>
-          <FaSave size={25} onClick={() => setEstaeditando(false)} />
-          <ImCancelCircle size={25} onClick={() => setEstaeditando(false)} />
+          <FaSave onClick={() => setEstaeditando(false)} />
+          <ImCancelCircle onClick={() => setEstaeditando(false)} />
         </S.Buttons>
       ) : (
         <S.Buttons>
-          <FaEdit size={25} onClick={() => setEstaeditando(true)} />
-          <IoPersonRemove size={25} />
+          <FaEdit onClick={() => setEstaeditando(true)} />
+          <IoPersonRemove />
         </S.Buttons>
       )}
     </S.Cont>

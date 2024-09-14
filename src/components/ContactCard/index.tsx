@@ -11,7 +11,7 @@ const ContactCard = () => {
     <S.ContactCard>
       <S.Titulo>
         <h2>Contatos criados</h2>
-        <span>0</span>
+        <span>{contacts.length}</span>
       </S.Titulo>
       {contacts.map((t) => (
         <Contact key={t.name} name={t.name} phone={t.phone} email={t.email} />

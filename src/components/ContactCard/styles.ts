@@ -34,7 +34,8 @@ export const Titulo = styled.div`
   span {
     background-color: rgba(0, 0, 0, 0.5);
     color: ${variables.white1};
-    padding: 2px 6px;
-    border-radius: 4px;
+    padding: 0.2em 0.6em;
+    border-radius: 6px;
+    font-weight: bold;
   }
 `
