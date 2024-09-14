@@ -13,11 +13,11 @@ import { useDispatch } from 'react-redux'
 type Props = ContactObj
 
 const Contact = ({ name, phone, email, id }: Props) => {
-  const [estaEditando, setEstaeditando] = useState(false)
+  const [isEditing, setisEditing] = useState(false)
   const dispatch = useDispatch()
 
   return (
-    <S.Cont>
+    <S.Cont isEditing={isEditing}>
       <img src="https://img.icons8.com/?size=100&id=98957&format=png&color=000000" />
       <div>
         <h2>{name}</h2>
@@ -25,14 +25,14 @@ const Contact = ({ name, phone, email, id }: Props) => {
         <p>{email}</p>
       </div>
 
-      {estaEditando ? (
+      {isEditing ? (
         <S.Buttons>
-          <FaSave onClick={() => setEstaeditando(false)} />
-          <ImCancelCircle onClick={() => setEstaeditando(false)} />
+          <FaSave onClick={() => setisEditing(false)} />
+          <ImCancelCircle onClick={() => setisEditing(false)} />
         </S.Buttons>
       ) : (
         <S.Buttons>
-          <FaEdit onClick={() => setEstaeditando(true)} />
+          <FaEdit onClick={() => setisEditing(true)} />
           <IoPersonRemove onClick={() => dispatch(remove(id))} />
         </S.Buttons>
       )}

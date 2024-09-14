@@ -1,7 +1,11 @@
 import { styled } from 'styled-components'
 import variables from '../../styles/variables'
 
-export const Cont = styled.div`
+type Props = {
+  isEditing: boolean
+}
+
+export const Cont = styled.div<Props>`
   width: 100%;
   padding: 1.5em 1em;
   display: grid;
@@ -13,6 +17,12 @@ export const Cont = styled.div`
 
   img {
     width: 50px;
+  }
+
+  h2,
+  p {
+    border-bottom: ${(props) =>
+      props.isEditing ? '2px solid rgba(0,0,0,0.5) ' : 'none'};
   }
 
   h2 {
