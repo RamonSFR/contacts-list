@@ -21,6 +21,96 @@ const initialState = [
     name: 'Maria Silva',
     phone: '(83) 99999-8888',
     email: 'maria@example.com'
+  },
+  {
+    name: 'Maria Silva',
+    phone: '(83) 99999-8888',
+    email: 'maria@example.com'
+  },
+  {
+    name: 'Maria Silva',
+    phone: '(83) 99999-8888',
+    email: 'maria@example.com'
+  },
+  {
+    name: 'Maria Silva',
+    phone: '(83) 99999-8888',
+    email: 'maria@example.com'
+  },
+  {
+    name: 'Maria Silva',
+    phone: '(83) 99999-8888',
+    email: 'maria@example.com'
+  },
+  {
+    name: 'Maria Silva',
+    phone: '(83) 99999-8888',
+    email: 'maria@example.com'
+  },
+  {
+    name: 'Maria Silva',
+    phone: '(83) 99999-8888',
+    email: 'maria@example.com'
+  },
+  {
+    name: 'Maria Silva',
+    phone: '(83) 99999-8888',
+    email: 'maria@example.com'
+  },
+  {
+    name: 'Maria Silva',
+    phone: '(83) 99999-8888',
+    email: 'maria@example.com'
+  },
+  {
+    name: 'Maria Silva',
+    phone: '(83) 99999-8888',
+    email: 'maria@example.com'
+  },
+  {
+    name: 'Maria Silva',
+    phone: '(83) 99999-8888',
+    email: 'maria@example.com'
+  },
+  {
+    name: 'Maria Silva',
+    phone: '(83) 99999-8888',
+    email: 'maria@example.com'
+  },
+  {
+    name: 'Maria Silva',
+    phone: '(83) 99999-8888',
+    email: 'maria@example.com'
+  },
+  {
+    name: 'Maria Silva',
+    phone: '(83) 99999-8888',
+    email: 'maria@example.com'
+  },
+  {
+    name: 'Maria Silva',
+    phone: '(83) 99999-8888',
+    email: 'maria@example.com'
+  },
+  {
+    name: 'Maria Silva',
+    phone: '(83) 99999-8888',
+    email: 'maria@example.com'
+  },
+  {
+    name: 'Maria Silva',
+    phone: '(83) 99999-8888',
+    email: 'maria@example.com'
+  },
+  {
+    name: 'Maria Silva',
+    phone: '(83) 99999-8888',
+    email: 'maria@example.com'
+  },
+  {
+    name: 'Maria Silva',
+    phone: '(83) 99999-8888',
+    email: 'maria@example.com'
   }
 ]
 

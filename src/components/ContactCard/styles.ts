@@ -3,12 +3,18 @@ import variables from '../../styles/variables'
 
 export const ContactCard = styled.div`
   width: 100%;
+  height: 100%;
+  overflow-y: scroll;
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
   flex-direction: column;
   color: ${variables.blue1};
   gap: 16px;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 
   @media (max-width: 768px) {
     width: 90%;
@@ -31,9 +37,4 @@ export const Titulo = styled.div`
     padding: 2px 6px;
     border-radius: 4px;
   }
-`
-
-export const ContactsArea = styled.div`
-  width: 100%;
-  overflow-y: scroll;
 `

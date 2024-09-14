@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const ContactsList = styled.div`
   width: 100%;
-  height: 100%;
+  height: 100vh;
   padding-bottom: 32px;
   display: flex;
 `
