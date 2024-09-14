@@ -4,7 +4,7 @@ import GlobalStyle from './styles'
 import store from './store'
 import Header from './containers/Header'
 import ContactsList from './containers/ContactsList'
-import BtnAdd from './components/BtnAdd'
+import AddBtn from './components/AddBtn'
 
 function App() {
   return (
@@ -12,7 +12,7 @@ function App() {
       <GlobalStyle />
       <Header />
       <ContactsList />
-      <BtnAdd />
+      <AddBtn />
     </Provider>
   )
 }
