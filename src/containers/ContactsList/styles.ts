@@ -4,6 +4,15 @@ import variables from '../../styles/variables'
 export const ContactsList = styled.div`
   background-color: ${variables.blue2};
   width: 100%;
-  height: 47.6rem;
+  height: 100%;
   display: flex;
+  padding-bottom: 32px;
+`
+
+export const Container = styled.div`
+  max-width: 896px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 0 auto;
 `

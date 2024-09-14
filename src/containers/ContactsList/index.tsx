@@ -1,9 +1,13 @@
-import Contact from '../../components/Contact'
+import ContactCard from '../../components/ContactCard'
+import Input from '../../components/Input'
 import * as S from './styles'
 const ContactsList = () => {
   return (
     <S.ContactsList>
-      <Contact />
+      <S.Container>
+        <Input />
+        <ContactCard />
+      </S.Container>
     </S.ContactsList>
   )
 }

@@ -3,9 +3,10 @@ import variables from '../../styles/variables'
 
 export const Input = styled.input`
   margin-top: -1.25rem;
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
   height: 2.5rem;
-  width: 45rem;
+  width: clamp(20rem, 60vw, 45rem);
+  max-width: 80vw;
   padding: 12px 16px;
   border-radius: 6px;
   border: 0.1rem solid ${variables.blue3};

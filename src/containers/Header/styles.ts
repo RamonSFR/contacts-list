@@ -3,7 +3,7 @@ import variables from '../../styles/variables'
 
 export const Header = styled.header`
   width: 100%;
-  padding: 4em 2em;
+  padding: 5em 2em;
   display: flex;
   align-items: center;
   gap: 0.5em;
