@@ -1,12 +1,10 @@
 import styled from 'styled-components'
-import variables from '../../styles/variables'
 
 export const ContactsList = styled.div`
-  background-color: ${variables.blue2};
   width: 100%;
   height: 100%;
-  display: flex;
   padding-bottom: 32px;
+  display: flex;
 `
 
 export const Container = styled.div`

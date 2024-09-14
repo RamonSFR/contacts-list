@@ -3,18 +3,22 @@ import { useState } from 'react'
 import { FaEdit, FaSave } from 'react-icons/fa'
 import { IoPersonRemove } from 'react-icons/io5'
 import { ImCancelCircle } from 'react-icons/im'
-import * as S from './styles'
 
-const Contact = () => {
+import * as S from './styles'
+import { ContactObj } from '../../store/reducers/contacts'
+
+type Props = ContactObj
+
+const Contact = ({ name, phone, email }: Props) => {
   const [estaEditando, setEstaeditando] = useState(false)
 
   return (
     <S.Cont>
       <img src="https://img.icons8.com/?size=100&id=98957&format=png&color=000000" />
       <div>
-        <h2>Ramon Sávio Fontes</h2>
-        <p>(83) 999358377</p>
-        <p>kwaidokrai@gmail.com</p>
+        <h2>{name}</h2>
+        <p>{phone}</p>
+        <p>{email}</p>
       </div>
 
       {estaEditando ? (

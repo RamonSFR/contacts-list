@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components'
+import variables from './variables'
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -7,6 +8,10 @@ const GlobalStyle = createGlobalStyle`
   box-sizing: border-box;
   font-family: 'Lato', sans-serif;
   list-style: none;
+}
+
+body {
+  background-color: ${variables.blue2};
 }
 `
 
