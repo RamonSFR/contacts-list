@@ -4,13 +4,17 @@ import { FaEdit, FaSave } from 'react-icons/fa'
 import { IoPersonRemove } from 'react-icons/io5'
 import { ImCancelCircle } from 'react-icons/im'
 
+import { remove } from '../../store/reducers/contacts'
+
 import * as S from './styles'
 import { ContactObj } from '../../store/reducers/contacts'
+import { useDispatch } from 'react-redux'
 
 type Props = ContactObj
 
-const Contact = ({ name, phone, email }: Props) => {
+const Contact = ({ name, phone, email, id }: Props) => {
   const [estaEditando, setEstaeditando] = useState(false)
+  const dispatch = useDispatch()
 
   return (
     <S.Cont>
@@ -29,7 +33,7 @@ const Contact = ({ name, phone, email }: Props) => {
       ) : (
         <S.Buttons>
           <FaEdit onClick={() => setEstaeditando(true)} />
-          <IoPersonRemove />
+          <IoPersonRemove onClick={() => dispatch(remove(id))} />
         </S.Buttons>
       )}
     </S.Cont>

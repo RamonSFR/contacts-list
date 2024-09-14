@@ -5,7 +5,7 @@ import Contact from '../Contact'
 import * as S from './styles'
 
 const ContactCard = () => {
-  const contacts = useSelector((state: RootReducer) => state.contacts)
+  const contacts = useSelector((state: RootReducer) => state.contacts.itens)
 
   return (
     <S.ContactCard>
@@ -14,7 +14,13 @@ const ContactCard = () => {
         <span>{contacts.length}</span>
       </S.Titulo>
       {contacts.map((t) => (
-        <Contact key={t.name} name={t.name} phone={t.phone} email={t.email} />
+        <Contact
+          key={t.name}
+          name={t.name}
+          phone={t.phone}
+          email={t.email}
+          id={t.id}
+        />
       ))}
     </S.ContactCard>
   )
