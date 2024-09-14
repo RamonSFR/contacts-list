@@ -4,7 +4,7 @@ import { FaEdit, FaSave } from 'react-icons/fa'
 import { IoPersonRemove } from 'react-icons/io5'
 import { ImCancelCircle } from 'react-icons/im'
 
-import { remove } from '../../store/reducers/contacts'
+import { remove, edit } from '../../store/reducers/contacts'
 
 import * as S from './styles'
 import { ContactObj } from '../../store/reducers/contacts'
@@ -18,6 +18,18 @@ const Contact = ({ name, phone, email, id }: Props) => {
   const [editedPhone, setEditedPhone] = useState(phone)
   const [editedEmail, setEditedEmail] = useState(email)
   const dispatch = useDispatch()
+
+  const handleSave = () => {
+    dispatch(
+      edit({
+        id,
+        name: editedName,
+        phone: editedPhone,
+        email: editedEmail
+      })
+    )
+    setIsEditing(false)
+  }
 
   return (
     <S.Cont>
@@ -52,7 +64,7 @@ const Contact = ({ name, phone, email, id }: Props) => {
 
       {isEditing ? (
         <S.Buttons>
-          <FaSave onClick={() => setIsEditing(false)} />
+          <FaSave onClick={handleSave} />
           <ImCancelCircle onClick={() => setIsEditing(false)} />
         </S.Buttons>
       ) : (
