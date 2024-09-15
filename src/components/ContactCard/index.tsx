@@ -1,15 +1,17 @@
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 
 import { RootReducer } from '../../store'
 import Contact from '../Contact'
 import * as S from './styles'
 
 import { ImFileEmpty } from 'react-icons/im'
+import { toggleModal } from '../../store/reducers/modal'
 
 const ContactCard = () => {
   const contacts = useSelector((state: RootReducer) => state.contacts.itens)
   const { searchTerm } = useSelector((state: RootReducer) => state.filters)
   const contactsEmpty = contacts.length === 0
+  const dispatch = useDispatch()
 
   const contactsFilter = () => {
     return contacts.filter(
@@ -39,7 +41,7 @@ const ContactCard = () => {
         <S.NoContacts>
           <ImFileEmpty />
           <h2>Você não tem nenhum contato salvo</h2>
-          <p>adicione mais contatos</p>
+          <p onClick={() => dispatch(toggleModal())}>adicione mais contatos</p>
         </S.NoContacts>
       )}
     </S.ContactCard>

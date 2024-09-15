@@ -63,5 +63,6 @@ export const NoContacts = styled.div`
     font-size: 1.35rem;
     font-weight: bold;
     color: ${variables.blue3};
+    cursor: pointer;
   }
 `

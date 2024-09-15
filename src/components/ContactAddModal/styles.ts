@@ -97,6 +97,6 @@ export const ModalContent = styled.div`
   }
 
   @media (max-width: 768px) {
-    width: 80%;
+    width: 90%;
   }
 `
