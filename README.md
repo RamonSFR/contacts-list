@@ -13,12 +13,14 @@ After Downloading the repo, to install the project dependencies use:
 ```bash
   npm install
 ```
-or
 ```bash
   yarn install
 ```
 then run:
 ```bash
   npm run dev
+```
+```bash
+  yarn run dev
 ```
 after that open your browser at the given localhost port
