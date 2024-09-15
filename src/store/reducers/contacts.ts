@@ -7,32 +7,11 @@ export type ContactObj = {
   id: number
 }
 
-const initialState = {
-  itens: [
-    {
-      name: 'Ramon Sávio',
-      phone: '(83) 99935-8377',
-      email: 'ramon@example.com',
-      id: 1
-    },
-    {
-      name: 'Maria Silva',
-      phone: '(83) 99999-8888',
-      email: 'maria@example.com',
-      id: 2
-    },
-    {
-      name: 'João Pedro',
-      phone: '(83) 99999-8888',
-      email: 'joão@example.com',
-      id: 3
-    }
-  ]
-}
-
 const ContactsSlice = createSlice({
   name: 'contacts',
-  initialState,
+  initialState: {
+    itens: [] as ContactObj[]
+  },
   reducers: {
     remove: (state, action: PayloadAction<number>) => {
       state.itens = state.itens.filter((c) => c.id !== action.payload)
