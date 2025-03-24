@@ -6,17 +6,20 @@ contact list made using React + Typescript and Redux for state management. Made 
 ![Redux](https://img.shields.io/badge/redux-%23593d88.svg?style=for-the-badge&logo=redux&logoColor=white)
 
 ## Installations requirements
-* NodeJS
+* Node
 
 ## Installation guide
-download the project using
+download the project:
 ```bash
   git clone https://github.com/RamonSFR/contacts-list
 ```
-access the project directory with
-```
+access the project directory:
+
+```bash
   cd contacts-list
 ```
+
+install the project dependencies:
 ```bash
   npm install
 ```
@@ -24,7 +27,7 @@ or
 ```bash
   yarn install
 ```
-then run:
+run de project using:
 ```bash
   npm run dev
 ```
@@ -32,4 +35,4 @@ or
 ```bash
   yarn run dev
 ```
-after that open your browser at the given localhost port
+then open your browser at the given localhost port
