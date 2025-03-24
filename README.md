@@ -9,7 +9,14 @@ contact list made using React + Typescript and Redux for state management. Made 
 * NodeJS
 
 ## Installation guide
-After Downloading the repo, to install the project dependencies use:
+download the project using
+```bash
+  git clone https://github.com/RamonSFR/contacts-list
+```
+access the project directory with
+```
+  cd contacts-list
+```
 ```bash
   npm install
 ```
