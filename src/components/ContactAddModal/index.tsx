@@ -7,7 +7,6 @@ import { RootReducer } from '../../store'
 import * as S from './styles'
 import { toggleModal } from '../../store/reducers/modal'
 import { add } from '../../store/reducers/contacts'
-
 const ContactAddModal = () => {
   const { isActive } = useSelector((state: RootReducer) => state.modal)
   const contacts = useSelector((state: RootReducer) => state.contacts.itens) // Pegamos os contatos atuais
